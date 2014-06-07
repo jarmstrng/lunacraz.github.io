@@ -1,0 +1,161 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	padding-top: 70px;
+	color: #333;
+}
+
+div {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox 28 and earlier*/
+}
+
+a {
+	color: steelblue;
+	text-decoration: none;
+}
+
+a:hover {
+	color: tomato;
+}
+
+.feed-headline a {
+	color: #333;
+}
+
+h2 {
+	margin: 10px 0;
+}
+
+strong {
+	color: tomato;
+}
+
+li {
+	margin: 0 0 10px 0;
+}
+
+li:last-child {
+	margin: 0;
+}
+
+#header {
+	width: 100%;
+	min-height: 60px;
+	border-bottom: 3px solid steelblue;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	background: #fff;
+	background: rgba(255, 255, 255, 0.9);
+	text-align: center;
+	padding: 0 20px;
+}
+
+#header h1 {
+	margin: 0;
+	font-size: 2.5em;
+	color: steelblue;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	position: static;
+}
+
+#content-area {
+	margin: 0;
+	padding: 10px;
+	width: 70%;
+	min-width: 320px;
+}
+
+#content-area h2 {
+	font-size: 2em;
+}
+
+h2.feed-headline {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin: 0;
+	border-bottom: 2px solid steelblue;
+}
+
+h2.feed-headline:first-child {
+	padding-top: 0;
+	margin: 10px 0 0 0;
+}
+
+h2.feed-headline:last-child {
+	padding-bottom: 0;
+	border:0;
+}
+
+.image-holder {
+	position: relative;
+	width: 100%;
+	margin-top: 30px;
+}
+
+.image-holder img {
+	width: 100%;
+	height: auto;
+}
+
+.image-holder .caption {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	height: 30px;
+	background: #fff;
+	background: rgba(255, 255, 255, 0.8);
+	text-align: center;
+	padding: 5px;
+}
+
+#sidebar {
+	margin: 0;
+	padding: 10px 10px 0 10px;
+	width: 30%;
+	float: right;
+}
+
+#sidebar .bio {
+	width: 100%;
+	text-align: center;
+}
+
+.bio .bio-image {
+	display: inline-block;
+	width: 100px;
+	border-radius: 100px;
+}
+
+#footer {
+	clear: both;
+	width: 100%;
+	height: 60px;
+	background: steelblue;
+	margin: 30px 0 0 0;
+	padding: 10px;
+	text-align: center;
+}
+
+#footer #footer-graphic {
+	color: #206094;
+	font-size: 30px;
+}
+
+@media (max-width: 700px) {
+	#sidebar {
+		width: 100%;
+		float: none;
+	}
+	#content-area {
+		width: 100%;
+	}
+}
