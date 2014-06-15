@@ -41,7 +41,7 @@ a:hover {
 	width: 100%;
 	max-width: 1000px;
 	margin: 0 auto;
-	position: static;
+	position: relative;
 }
 
 #main {
@@ -55,6 +55,32 @@ a:hover {
 
 #main h1{
 	font-size: 1.5em;
+}
+
+.regular li{
+	background-color:#eee;
+	border:1px solid;
+	border-color:#f3f3f3 #bbb #bbb #f3f3f3;
+	margin:0;
+	padding:.5em;
+}
+
+.inline li{
+	display: inline;
+	background-color:#eee;
+	border:1px solid;
+	border-color:#f3f3f3 #bbb #bbb #f3f3f3;
+	margin:0;
+	padding:.5em;
+}
+
+.inlineblock li{
+	display: inline-block;
+	background-color:#eee;
+	border:1px solid;
+	border-color:#f3f3f3 #bbb #bbb #f3f3f3;
+	margin:0;
+	padding:.5em;
 }
 
 .imagesizer {

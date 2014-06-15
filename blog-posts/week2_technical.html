@@ -1,0 +1,101 @@
+
+<!doctype html>
+<html>
+<head>
+	<meta charset=”utf-8”>
+	<title>Victor Y's Blog</title>
+	<link rel="stylesheet" type="text/css" href="blog.css" />
+</head>
+<body>
+	<div id="header">
+		<h1>Welcome to Victor Yang's Blog</h1>
+	</div>
+	<div class="wrapper">
+		<div id="sidebar">
+			<b>Who am I?</b>
+			<p>Hey I'm Victor and I'm on a journey to becoming a developer.</p> 
+			<p>E-mail me <a href="mailto:victor.h.yang@gmail.com">here</a>!</p>
+			<p>Check out my posts:</p>
+			<p><a href="week1_technical.html">Week 1 Technical post</a></p>
+			<p><a href="week1_cultural.html">Week 1 Cultural post</a></p>
+			<p><a href="week2_technical.html">Week 2 Technical Post</a><p>
+		</div>
+		<div id="main">
+			<h1>Week 2 Technical Post</h1>
+			<p>For this week's technical post, I've decided to tackle inline and inline boxes.</p>
+			<p>For this purpose, we'll use simple list items to demonstrate this.  For example, this is what a regular unordered list (I've added some formatting to the itmes for consistency):<p>
+			<ul class="regular">
+				<li>Item #1</li>
+				<li>Item #2</li>
+				<li>Item #3</li>
+				<li>Item #4</li>
+			</ul>
+			<p>However, if we use the inline display, we can list them side by side</p>
+			<ul class="inline">
+				<li>Item #1</li>
+				<li>Item #2</li>
+				<li>Item #3</li>
+				<li>Item #4</li>
+			</ul>
+			<p> It looks nice, but if we start using a lot more blocks with the inline, where it goes on the left side, you'll start seeing issues, like so:
+			<ul class="inline">
+				<li>Item #1</li>
+				<li>Item #2</li>
+				<li>Item #3</li>
+				<li>Item #4</li>
+				<li>Item #5</li>
+				<li>Item #6</li>
+				<li>Item #7</li>
+				<li>Item #8</li>
+				<li>Item #9</li>
+				<li>Item #10</li>
+				<li>Item #11</li>
+				<li>Item #12</li>
+				<li>Item #1</li>
+				<li>Item #2</li>
+				<li>Item #3</li>
+				<li>Item #4</li>
+				<li>Item #5</li>
+				<li>Item #6</li>
+				<li>Item #7</li>
+				<li>Item #8</li>
+				<li>Item #9</li>
+				<li>Item #10</li>
+				<li>Item #11</li>
+				<li>Item #12</li>
+			</ul>
+			<p>Inline block takes care of this.  Inline constantly stacks the elements to the right, much like a float:left does. However there's no height attached to these elements.  Inline-Block takes care of this; each element has it's own width and height, so they are more ordered, and the weird stacking no longer occurs. </p>
+			<ul class="inlineblock">
+				<li>Item #1</li>
+				<li>Item #2</li>
+				<li>Item #3</li>
+				<li>Item #4</li>
+				<li>Item #5</li>
+				<li>Item #6</li>
+				<li>Item #7</li>
+				<li>Item #8</li>
+				<li>Item #9</li>
+				<li>Item #10</li>
+				<li>Item #11</li>
+				<li>Item #12</li>
+				<li>Item #1</li>
+				<li>Item #2</li>
+				<li>Item #3</li>
+				<li>Item #4</li>
+				<li>Item #5</li>
+				<li>Item #6</li>
+				<li>Item #7</li>
+				<li>Item #8</li>
+				<li>Item #9</li>
+				<li>Item #10</li>
+				<li>Item #11</li>
+				<li>Item #12</li>
+			</ul>
+			<p>As you can see, inline block works very well; it keeps the elements separate, and there's no need to clear the formatting afterwards either, since each of these objects have specific widths and heights.
+		</div>
+	</div>
+	<div id="footer">
+		Devbootcamp
+	</div>
+</body>
+</html
