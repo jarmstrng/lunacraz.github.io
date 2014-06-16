@@ -1,0 +1,108 @@
+html, body {
+	font-family: 'Open Sans', Arial, sans-serif;
+	background: steelblue;
+
+}
+
+header {
+	width: 100%;
+	height: 4em;
+	text-align: center;
+	text-shadow: 0.1em 0.1em 0.05em black;
+	color: white;
+}
+
+#wrapper{
+	min-width: 980px;
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+main {
+	float: left;
+	padding: 1em; 
+	border-radius: .5em;
+	box-shadow: .1em .1em .1em .1em black;
+	background: white;
+	width: 65%;
+	margin-right: 2em;
+	min-height: 30em;
+}
+
+main p {
+	padding-left: 1em;
+	font-size: .8em;
+}
+
+nav {
+	margin-top: 1em;
+	float: left;
+	padding: 1em;
+	border-radius: .5em;
+	box-shadow: .1em .1em .1em .1em black;
+	background: white;
+	width: 23%;
+	font-size: .8em;
+}
+
+nav ul{
+	list-style-type: none;
+	margin: 1em;
+	padding: 0;
+}
+
+#bio{
+	font-size: .8em;
+	float: left;
+	padding: 1em; 
+	border-radius: .5em;
+	box-shadow: .1em .1em .1em .1em black;
+	background: white;
+	width: 23%;
+}
+
+#bio p {
+	padding: 0em;
+	margin: 0em;
+}
+
+#bio img{
+	display: block;
+	border-radius: 5em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1em;
+}
+
+footer{
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	color: white;
+	width: 100%;
+}
+
+a {
+	font-style: none;
+	text-decoration: none;
+}
+
+/* unvisited link */
+a:link {
+    color: #800000;
+}
+
+/* visited link */
+a:visited {
+    color: #FF9933;
+}
+
+/* mouse over link */
+a:hover {
+    color: #FF3300;
+}
+
+/* selected link */
+a:active {
+    color: #FF6600;
+}
