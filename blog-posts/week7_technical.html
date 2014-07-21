@@ -1,0 +1,62 @@
+
+<!doctype html>
+<html>
+<head>
+	<meta charset=”utf-8”>
+	<title>Victor Y's Blog</title>
+	<link rel="stylesheet" type="text/css" href="blog.css" />
+</head>
+<body>
+	<div id="header">
+		<h1>Welcome to Victor Yang's Blog</h1>
+	</div>
+	<div class="wrapper">
+		<div id="sidebar">
+			<b>Who am I?</b>
+			<p>Hey I'm Victor and I'm on my journey to becoming a developer.</p> 
+			<p>E-mail me <a href="mailto:victor.h.yang@gmail.com">here</a>!</p>
+			<p>Check out my posts:</p>
+			<ul>
+				<li><a href="week1_technical.html">Week 1 Technical post</a></li>
+				<li><a href="week1_cultural.html">Week 1 Cultural post</a></li>
+				<li><a href="week2_technical.html">Week 2 Technical Post</a></li>
+				<li><a href="week3_technical.html">Week 3 Technical Post</a></li>
+				<li><a href="week4_technical.html">Week 4 Technical Post</a></li>
+				<li><a href="week4_cultural.html">Week 4 Cultural Post</a></li>
+				<li><a href="week5_technical.html">Week 5 Technical Post</a></li>
+				<li><a href="week5_cultural.html">Week 5 Cultural Post</a></li>
+				<li><a href="week6_technical.html">Week 6 Technical Post</a></li>
+				<li><a href="week6_cultural.html">Week 6 Cultural Post</a></li>
+			</uL>
+		</div>
+		<div id="main">
+			<h1>Week 6 Technical Post - Class vs Instance Methods</h1>
+			<p>Class and Instance methods are best summed up by stating that class methods that are called on classes, and instance methods are called on instances of the classes.</p>
+			<p><pre><code>
+	class Sample
+		def self.hello
+    		puts 'hello'
+  		end
+  
+  		def hilo
+    		puts 'hilo'
+  		end
+	end
+
+	Sample.hello # => "hello"
+	Sample.hilo # => NoMethodError: undefined method ‘hilo’ for Sample:Class
+
+	sampleinst = Sample.new
+	sampleinst.hilo # => hilo
+	sample.hello # => NoMethodError: undefined method ‘hello’ for #
+			</pre></code></p>
+			<p>As you can see, the class methods are defined as putting the "self" in front of the class method declaration.  So that when you call the class method, you just type the Class name, followed by the method, as seen above with the hello method.  If you had to call the hilo method on the class name, there would be an error with an undefined method.</p>
+			<p>With the instance method, when you create an instance of the class, as shown with "sampleinst", you use that name from thereon to call the instance methods, as shown with the hilo method above.  If you tried to call the hello method on the instance sampleinst, then it would be a undefined method.</p>
+			<p>Basically, any time you are dealing with just the class, you would call the class method, and any time you were dealing with a specific created instance of a variable, you would call the insstance method.  One example of something that could be used for a class method, is, for example, every time a new instance is created, a class variable is incremented by one. So you could create a class method to output the number of times an instance has been created, that's not accessible from instance methods.<p>
+		</div>
+	</div>
+	<div id="footer">
+		Devbootcamp
+	</div>
+</body>
+</html
