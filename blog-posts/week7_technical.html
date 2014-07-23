@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
 <head>
@@ -27,32 +26,35 @@
 				<li><a href="week5_cultural.html">Week 5 Cultural Post</a></li>
 				<li><a href="week6_technical.html">Week 6 Technical Post</a></li>
 				<li><a href="week6_cultural.html">Week 6 Cultural Post</a></li>
+				<li><a href="week7_technical.html">Week 7 Technical Post</a></li>
+				<li><a href="week7_cultural.html">Week 7 Cultural Post</a></li>
 			</uL>
 		</div>
 		<div id="main">
-			<h1>Week 6 Technical Post - Class vs Instance Methods</h1>
-			<p>Class and Instance methods are best summed up by stating that class methods that are called on classes, and instance methods are called on instances of the classes.</p>
+			<h1>Week 7 Technical Post - SQL Injections</h1>
+			<p>SQL Injections, which have been around for a long time (even from 1998!), is still a significant source of web vulnerabilities today.  There are several main types of SQL injections:</p>
+			<ul>
+				<li>Classic SQL Injection</li>
+				<li>Blind SQLI</li>
+				<li>Database management system - specific SQLI</li>
+				<li>Compounded SQLI</li>
+			</ul>
+			<p>Basically a SQL injection is using the SQL queries and adjusting the statements so that it will do something else besides the intended purpose of gathering data.  I'll try to go through a couple examples here.</p>
+			<p>For example, in this instance, incorrectly filtered escape characters is used.  For example, using the following code in authentication procedure:</p>
 			<p><pre><code>
-	class Sample
-		def self.hello
-    		puts 'hello'
-  		end
-  
-  		def hilo
-    		puts 'hilo'
-  		end
-	end
-
-	Sample.hello # => "hello"
-	Sample.hilo # => NoMethodError: undefined method ‘hilo’ for Sample:Class
-
-	sampleinst = Sample.new
-	sampleinst.hilo # => hilo
-	sample.hello # => NoMethodError: undefined method ‘hello’ for #
+	SELECT * FROM users WHERE name = '' OR '1'='1' -- ';
 			</pre></code></p>
-			<p>As you can see, the class methods are defined as putting the "self" in front of the class method declaration.  So that when you call the class method, you just type the Class name, followed by the method, as seen above with the hello method.  If you had to call the hilo method on the class name, there would be an error with an undefined method.</p>
-			<p>With the instance method, when you create an instance of the class, as shown with "sampleinst", you use that name from thereon to call the instance methods, as shown with the hilo method above.  If you tried to call the hello method on the instance sampleinst, then it would be a undefined method.</p>
-			<p>Basically, any time you are dealing with just the class, you would call the class method, and any time you were dealing with a specific created instance of a variable, you would call the insstance method.  One example of something that could be used for a class method, is, for example, every time a new instance is created, a class variable is incremented by one. So you could create a class method to output the number of times an instance has been created, that's not accessible from instance methods.<p>
+			<p>could mean that any name would be returned, since 1 would always equal 1.  You could gain all information about the table users even if you didn't know a valid "name"</p>
+			<p>Another example is when the fields are not checked for type constraints.  For example, if we put a_variable equal to 1;DROP TABLE users in the following query:</p>
+			<p><pre><code>
+	statement := "SELECT * FROM userinfo WHERE id =" + a_variable + ";"
+			</pre></code></p>
+			<p> it would be equivalent to this:
+			<p><pre><code>
+	SELECT * FROM userinfo WHERE id=1;DROP TABLE users;
+			</pre></code></p>
+			<p>Which would delete all the "users" from the table.</p>
+			<p>There are multitudes of other types of SQLIs, but hopefully these examples give a pretty good idea of what they are.  Since SQL queries themselves are lines of code, and if the database creators don't focus enough on controlling the types of values and expressions within the queries, hidden commands and pulls can be executed with or without the user knowing.  Since databases are still such a huge part of business today, these SQLIs will most likely still be a large issue in general.</p>
 		</div>
 	</div>
 	<div id="footer">
