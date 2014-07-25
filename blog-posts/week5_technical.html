@@ -30,7 +30,42 @@
 		<div id="main">
 			<h1>Week 5 Technical Post - </h1>
 			<p><b>Classes</b></p>
-			<p>Classes are a powerful tool- without them, the idea of object oriented programming really falls apart. You can create classes to help encapsulate the code. For example, if you had to create a <p>
+			<p>Classes are a powerful tool- without them, the idea of object oriented programming really falls apart. You can create classes to help encapsulate the code; say if you knew specifically of an a group of "objects" or "instances" that always shared the same attributes, that would be great for a class.  We could set up a Basketball Team Class, where every instance of that class can be a team with the # of players, the names of the players, the starting roster, etc.  We can go ahead and try to create one now- and make a couple instances of the class. </p>
+			<p><pre><code>
+	class BasketballTeam
+  		
+  		attr_reader :pg
+  		attr_reader :sg
+  		attr_reader :sf
+  		attr_reader :pf
+  		attr_reader :c
+  		attr_reader :coach
+
+  		def initialize(pg, sg, sf, pf, c, coach)
+    		@pg = pg
+    		@sg = sg
+    		@sf = sf
+    		@pf = pf
+    		@c = c
+    		@coach = coach
+  		end
+
+  		def print_roster
+  			puts "Point Guard - #{@pg}"
+  			puts "Shooting Guard - #{@sg}"
+  			puts "Small Forward - #{@sf}"
+  			puts "Power Forward - #{@pf}"
+  			puts "Center - #{@c}"
+  		end
+
+
+	end
+
+	newYorkKnicks = BasketballTeam.new("Raymond Felton", "JR SMith", "Carmelo Anthony", "Amare Stoudemire", "Tyson Chandler," "Mike Woodson")
+	newJerseyNets = BasketballTeam.new("", "JR SMith", "Carmelo Anthony", "Amare Stoudemire", "Tyson Chandler," "Mike Woodson")
+		</pre></code></p>
+		<p>So here, I've created two instances of Basketball teams, one for the Knicks, and one for the Nets.  Both have print_roster as a method, where if you write newYorkKnicks.print_roster or newJerseyNets.print_roster, it'll print out the roster for each team.  You could add more methods related to the class, or add more instances of "teams". I've also allowed access to each position, so that, for example, newYorkKnicks.sf would output "Carmelo Anthony".</p>
+		<p>As you can see, whenever you know there's a bunch of "objects" that need the same methods/attributes, like sports teams, or restaurants, or say, types of buildings, or computers, you could create classes to encapsulate all of them.</p>
 		</div>
 	</div>
 	<div id="footer">
