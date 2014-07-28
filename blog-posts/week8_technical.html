@@ -34,6 +34,19 @@
 		</div>
 		<div id="main">
 			<h1>Week 8 Technical Post - Sorting (merge sort, quick sort, bubble sort)</h1>
+			<p>Sorting is a farily complicated and significant part in programming that's studied a lot - I remember in High School in AP Comp Sci we had to take a look at sorts, and figure out the different ways there was to do so.</p>
+			<p>All sorts are ranked on their "performance" or computational complexity, which is identified by their Big O notation - basically how effecient (how many comparisons) the sort is based on a list of <i>n</i>. Optimal / peak sorting results in O(log n) (parallel sorting), or O(n) for sequential sorting. Good is O(n log n) - parallel is O(log<sup>2</sup> n). Bad is usually O(n<sup>2</sup>).</p>
+			<p>There are also different ways to look at sorts - whether or not they use a lot of memory, how stable the sort is (ie, relative orders are not kept), what kind of sorts it is (exchange - bubble sort and quicksort; selection - shaker sort and heapsort). Here, however, I'll go over three of the most well known sorts: the bubble sort, the merge sort, and the quick sort.</p>
+			<h2>Bubble Sort - average O(n<sup>2</sup>)</h2>
+			<img src = "images/Bubble-sort-example-300px.gif">
+			<p>This is probably the easiest and most simple sort out of all the sorts. All it does is compare each pair of numbers, iterated through the list- if the first number is larger than the second number, then the numbers are swapped, and the cursor moves to the next number. After the first run through of the list, the last item in the list will always be the largest number. It's easy to follow and figure out, but as you can see, there has to be n number of comparisons for the first, time, n-1 comparisons for the second, and there's no test to see if the list was "accidentally" sorted already through the comparisons before.</p>
+			<h2>Merge Sort - average O(n log n)</h2>
+			<img src = "images/Merge-sort-example-300px.gif">
+			<p>Merge sort is a little harder to follow, but the concept is a bottoms up approach - basically you want to separate out the list into the smallest unit, which is one element. Then one by one, you merge the elements together in a sorted pattern into bigger elements (this time, pairs of two). You keep comparing the elements together, and merging them into the right order.<p>
+			<h2>Quick Sort - average O(n log n)</h2>
+			<img src = "images/Sorting_quicksort_anim.gif">
+			<p>Quick sort basically works by splitting the list in the smaller section by using a "pivot" element. Then you would order the array so that all the values larger than that pivot are moved to the right of the pivot, and all the smaller values are moved to the left (not sorted).  This creates two partitions - where you would do the same thing in each partition - choose a pivot value, and split the partitions into even smaller ones - with the smaller ones on the left and the larger ones on the right.  This would continue until the partitions are arrays of one or zero, recursively.</p>
+			<p>These are only three of the most common sorts - there are multitudes of others that serve various purposes. It's always amazing to me to realize that sorting is such a complicated and complex part of programming.</p>
 		</div>
 	</div>
 	<div id="footer">
