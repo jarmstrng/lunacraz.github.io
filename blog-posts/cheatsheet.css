@@ -14,6 +14,9 @@ div {
 pre{
 	border-style: solid;
 	padding: 1em;
+	display: block;
+	position: relative;
+
 }
 
 a {
@@ -101,10 +104,10 @@ a:hover {
 
 #sidebar {
 	margin: 0;
-	padding: 10px 10px 0 10px;
+	padding: 10px 30px 0 10px;
 	width: 20%;
 	float: left;
-	min-height: 50em;
+	min-height: 175em;
 }
 
 #sidebar ul {

@@ -1,12 +1,3 @@
-<!-- Javascript cheatsheet
-- Define variables / different data types
-- Function Declarations (couple different ways to do it)
-- For loops
-- If else statements
-- commenting
-- different ways to define an object
--->
-
 <!doctype html>
 <html>
 <head>
@@ -22,11 +13,12 @@
 		<div id="sidebar">
 			<b>Topics</b>
 			<ul>
-				<li><a href="#define_variable">Defining Variables / Data Types</a></li>
-				<li><a href="week1_cultural.html">Week 1 Cultural post</a></li>
-				<li><a href="week2_technical.html">Week 2 Technical Post</a></li>
-				<li><a href="week3_technical.html">Week 3 Technical Post</a></li>
-				<li><a href="week4_technical.html">Week 4 Technical Post</a></li>
+				<li><a href="#define_variable" >Defining Variables</a></li>
+				<li><a href="#functions">Functions</a></li>
+				<li><a href="#for_loops">For Loops</a></li>
+				<li><a href="#while_loops">While / Do While Loops</a></li>
+				<li><a href="#if_else">If Else Statements</a></li>
+				<li><a href="#define_object"></a></li>
 			</uL>
 		</div>
 		<div id="main">
@@ -85,6 +77,58 @@ for (x in person) {
 }
 			</pre></blockquote>
 
+			<a name="while_loops">While / Do While Loops</a>
+			<p>Another type of loop are While, and Do While loops, which are the same, except whether it checks the condition at the beginning or the end:</p>
+			<blockquote><pre>
+While Loop:
+
+while (condition) {
+    code block to be executed
+}
+
+while (i < 10) {
+    text += "The number is " + i;
+    i++;
+}
+
+Do While Loop:
+
+do {
+    code block to be executed
+}
+while (condition);
+
+do {
+    text += "The number is " + i;
+    i++;
+}
+while (i < 10);
+
+			</pre></blockquote>
+
+
+			<a name="if_else">If/Else Statements</a>
+			<p>Here's how to do an if/else/else if statement, followed by an example</p>
+			<blockquote><pre>
+if (condition1) {
+    block of code to be executed if condition1 is true
+} else if (condition2) {
+    block of code to be executed if the condition1 is false and condition2 is true
+} else {
+    block of code to be executed if the condition1 is false and condition2 is false
+}
+
+if (time < 10) {
+    greeting = "Good morning";
+} else if (time<20) {
+    greeting = "Good day";
+} else {
+    greeting = "Good evening";
+}
+
+			</pre></blockquote>
+
+
 			<a name="define_object">Defining Objects</a>
 			<p>Here are some different ways to define Object objects:</p>
 			<blockquote><pre>
@@ -106,7 +150,7 @@ var myStructure = {
 var anObject = new Object();
 
 // Adding/accessing properties:
-anObject['prop'] = 'value'; 			// assign property of an Object via bracket syntax
+anObject['prop'] = 'value';   // assign property of an Object via bracket syntax
 			</pre></blockquote>
 		</div>
 	</div>
