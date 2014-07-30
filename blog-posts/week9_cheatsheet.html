@@ -1,0 +1,91 @@
+<!-- Javascript cheatsheet
+- Define variables / different data types
+- Function Declarations (couple different ways to do it)
+- For loops
+- If else statements
+- commenting
+- different ways to define an object
+-->
+
+<!doctype html>
+<html>
+<head>
+	<meta charset=”utf-8”>
+	<title>Jessica and Victor's Javascript Syntax Cheatsheet!</title>
+	<link rel="stylesheet" type="text/css" href="cheatsheet.css" />
+</head>
+<body>
+	<div id="header">
+		<h1>Jessica and Victor's Fantastic Javascript Syntax Cheatsheet</h1>
+	</div>
+	<div class="wrapper">
+		<div id="sidebar">
+			<b>Topics</b>
+			<ul>
+				<li><a href="#define_variable">Defining Variables / Data Types</a></li>
+				<li><a href="week1_cultural.html">Week 1 Cultural post</a></li>
+				<li><a href="week2_technical.html">Week 2 Technical Post</a></li>
+				<li><a href="week3_technical.html">Week 3 Technical Post</a></li>
+				<li><a href="week4_technical.html">Week 4 Technical Post</a></li>
+			</uL>
+		</div>
+		<div id="main">
+			<a name="define_variable">Defining Variables of Different Data Types</a>
+			<p>Here are some examples of javascript <b>literal</b> variable declarations of different data types:</p>
+			<blockquote><pre>
+var length = 16;                               // Number assigned by a number literal
+var points = x * 10;                           // Number assigned by an expression literal
+var lastName = "Johnson";                      // String assigned by a string literal
+var cars = ["Saab", "Volvo", "BMW"];           // Array assigned by an array literal
+var person = {firstName:John, lastName:Doe};   // Object assigned by an object literal
+			</pre></blockquote>
+
+			<a name="functions">Function Declarations</a>
+			<p>Here are some different ways to declare functions:</p>
+			<blockquote><pre>
+
+function superFizzBuzz (array) {
+	return array;
+};
+
+var superFizzBuzz = function(array) {
+	return array;
+};
+
+var superFizzBuzz = new Function('array', 'return array')  // No one uses this
+
+			</pre></blockquote>
+
+			<a name="for_loops">For Loops</a>
+			<p>Here are some exmples of for loops- the first type of for loop is non object specific; you can create a variable to iterate over (a specific amount of times).  The For..In loop, however, will loop through properties in an object:</p>
+			<blockquote><pre>
+
+Regular For Loop
+
+for (statement 1; statement 2; statement 3) {
+    code block to be executed;
+}
+
+for (i = 0; i < 5; i++) {
+    text += "The number is " + i + "<br>";
+}
+
+For..In Loop
+
+for (var property_name in some_object) {
+   //statements using some_object[property_name];
+}
+
+var person = {fname:"John", lname:"Doe", age:25}; 
+
+var text = "";
+var x;
+for (x in person) {
+    text += person[x];
+}
+			</pre></blockquote>
+
+		</div>
+	</div>
+</body>
+</html>
