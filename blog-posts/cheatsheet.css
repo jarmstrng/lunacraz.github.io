@@ -11,6 +11,11 @@ div {
 	box-sizing: border-box;
 }
 
+pre{
+	border-style: solid;
+	padding: 1em;
+}
+
 a {
 	color: cornflowerblue;
 	text-decoration: none;
@@ -99,6 +104,7 @@ a:hover {
 	padding: 10px 10px 0 10px;
 	width: 20%;
 	float: left;
+	min-height: 50em;
 }
 
 #sidebar ul {
