@@ -13,10 +13,16 @@ div {
 
 pre{
 	border-style: solid;
-	padding: 1em;
+	margin-left: 20%;
+	padding: 1em 1em 1em -2em;
 	display: block;
 	position: relative;
-
+	width: 810px;                          /* specify width  */
+	white-space: pre-wrap;                 /* CSS3 browsers  */
+	white-space: -moz-pre-wrap !important;  1999+ Mozilla  
+	white-space: -pre-wrap;                /* Opera 4 thru 6 */
+	white-space: -o-pre-wrap;              /* Opera 7 and up */
+	word-wrap: break-word;   
 }
 
 a {
